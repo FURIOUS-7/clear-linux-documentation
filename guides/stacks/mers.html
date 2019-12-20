@@ -1,0 +1,1471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-61272224-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", [/(community\.|www\.|^)clearlinux\.org/gi], true);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+
+
+  <title>Media Reference Stack &mdash; Documentation for Clear Linux* project</title>
+  
+
+
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="docs.01.org/clearlinux/guides/stacks/mers.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorials" href="../../tutorials/index.html" />
+    <link rel="prev" title="Enable AWS Greengrass* and OpenVINO™ toolkit" href="greengrass.html" />
+
+<link rel="stylesheet" href="../../_static/tcs_theme.css" type="text/css" />
+
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #007ab2" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Clear Linux* Project Docs
+          
+
+          
+            
+            <img src="../../_static/clearlinux.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" id="clear-docs-search" placeholder="Search documentation" results="0"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+  
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Clear Linux</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Language Versions</dt>
+        
+          <dd><a href="/clearlinux/latest/guides/stacks/mers.html">English</a></dd>
+        
+          <dd><a href="/clearlinux/latest/zh_CN/guides/stacks/mers.html">简体中文 (Simplified Chinese)</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Document Versions</dt>
+        
+          <dd><a href="/clearlinux/latest/guides/stacks/mers.html">latest</a></dd>
+        
+          <dd><a href="/clearlinux/latest/guides/stacks/mers.html">Future versions</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>clearlinux.org links</dt>
+          <dd>
+            <a href="https://www.clearlinux.org/">Project Home</a>
+          </dd>
+          <dd>
+            <a href="https://github.com/clearlinux/clear-linux-documentation">GitHub</a>
+          </dd>
+      </dl>
+    </div>
+  </div>
+  
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/index.html#pre-install">Pre-install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/compatibility-check.html">Check processor and EFI firmware compatibility</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/compatibility-check.html#check-compatibility">Check compatibility</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/bootable-usb.html">Create a bootable USB drive</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bootable-usb.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bootable-usb.html#create-a-bootable-usb-drive-on-linux">Create a bootable USB drive on Linux*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bootable-usb.html#create-a-bootable-usb-drive-on-macos">Create a bootable USB drive on macOS*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bootable-usb.html#create-a-bootable-usb-drive-on-windows">Create a bootable USB drive on Windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/index.html#install">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html">Install Clear Linux* OS from the live desktop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#system-requirements">System requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#preliminary-steps">Preliminary steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#install-from-live-image">Install from live image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#minimum-installation-requirements">Minimum installation requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#cl-desktop-installer">Clear Linux OS Desktop Installer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#navigation">Navigation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#required-options">Required options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#advanced-options">Advanced options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#finish-installation">Finish installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/bare-metal-install-server.html">Install Clear Linux* OS from the live server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#system-requirements">System requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#download-the-latest-cl-live-server-image">Download the latest Clear Linux OS live server image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#install-cl-on-your-target-system">Install Clear Linux OS on your target system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#launch-the-cl-installer">Launch the Clear Linux OS Installer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#minimum-installation-requirements">Minimum installation requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#main-menu">Main Menu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#navigation">Navigation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#required-options">Required options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#recommended-options">Recommended options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#advanced-options">Advanced options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#finish-installation">Finish installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/bare-metal-install-server.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/install-configfile.html">Install using clr-installer and a configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/install-configfile.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/install-configfile.html#process">Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/install-configfile.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/ipxe-install.html">Install Clear Linux OS Over the Network with iPXE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#install-cl-on-server">Install Clear Linux OS on server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#setup-nginx-web-server-to-host-ipxe">Setup nginx web server to host iPXE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#configure-ipxe">Configure iPXE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#add-clr-installer-yaml-configuration-files">Add clr-installer YAML configuration files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#configure-network">Configure network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#setup-nat">Setup NAT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#setup-dnsmaq-for-dhcp-dns-and-tftp-functionalities">Setup dnsmaq for DHCP, DNS, and TFTP functionalities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#verify-setup">Verify setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/ipxe-install.html#deploy">Deploy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/index.html#install-in-a-virtual-machine">Install in a virtual machine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/virtual-machine-install/hyper-v.html">Clear Linux* OS on Microsoft Hyper-V*</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/hyper-v.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/hyper-v.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/hyper-v.html#download-the-cl-disk-image-for-hyper-v">Download the Clear Linux OS disk image for Hyper-V</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/hyper-v.html#create-and-configure-new-vm">Create and configure new VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/hyper-v.html#start-the-vm">Start the VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/hyper-v.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/virtual-machine-install/kvm.html">Clear Linux* OS on KVM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/kvm.html#install-qemu-kvm">Install QEMU-KVM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/kvm.html#download-and-launch-the-virtual-machine-image">Download and launch the virtual machine image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/kvm.html#optional-enable-ssh-access">Optional: Enable SSH access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/kvm.html#optional-install-a-graphical-user-interface-gui">Optional: Install a graphical user interface (GUI)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/virtual-machine-install/parallels.html">Clear Linux* OS on Parallels* Desktop for Mac*</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/parallels.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/parallels.html#download-iso-image">Download ISO image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/parallels.html#initialize-new-vm">Initialize new VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/parallels.html#install-cl-on-vm">Install Clear Linux OS on VM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/virtual-machine-install/virt-manager.html">Clear Linux* OS using virt-manager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virt-manager.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virt-manager.html#download-the-cl-installer-iso">Download the Clear Linux OS installer ISO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virt-manager.html#launch-and-set-up-virt-manager">Launch and set up virt-manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virt-manager.html#create-a-new-virt-manager-virtual-machine">Create a new virt-manager virtual machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virt-manager.html#install-cl-in-the-virt-manager-vm">Install Clear Linux OS in the virt-manager VM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/virtual-machine-install/virtualbox-cl-installer.html">Clear Linux* OS on VirtualBox*</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virtualbox-cl-installer.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virtualbox-cl-installer.html#download-and-extract-the-cl-installer-iso">Download and extract the Clear Linux OS installer ISO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virtualbox-cl-installer.html#create-a-new-vb-virtual-machine">Create a new VirtualBox virtual machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virtualbox-cl-installer.html#install-cl-on-the-vb-vm">Install Clear Linux OS on the VirtualBox VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/virtualbox-cl-installer.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html">Clear Linux* OS on VMware* Workstation Player</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html#install-the-vmware-workstation-player-hypervisor">Install the VMware Workstation Player hypervisor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html#create-and-configure-a-new-vm">Create and configure a new VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html#enable-uefi-boot-support">Enable UEFI boot support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html#download-the-latest-cl-image">Download the latest Clear Linux OS image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html#install-cl-into-the-new-vm">Install Clear Linux OS into the new VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html#install-open-vm-tools">Install open-vm-tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmw-player.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/virtual-machine-install/vmware-esxi-install-cl.html">Clear Linux* OS on VMware* ESXi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmware-esxi-install-cl.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmware-esxi-install-cl.html#download-the-latest-cl-installer-iso">Download the latest Clear Linux OS installer ISO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmware-esxi-install-cl.html#upload-the-cl-installer-iso-to-the-vmware-server">Upload the Clear Linux OS installer ISO to the VMware server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmware-esxi-install-cl.html#create-and-configure-a-new-vm">Create and configure a new VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmware-esxi-install-cl.html#install-cl-into-the-new-vm">Install Clear Linux OS into the new VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmware-esxi-install-cl.html#reconfigure-the-vm-s-settings-to-boot-the-newly-installed-cl">Reconfigure the VM’s settings to boot the newly-installed Clear Linux OS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/virtual-machine-install/vmware-esxi-install-cl.html#power-on-the-vm-and-boot-cl">Power on the VM and boot Clear Linux OS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/increase-virtual-disk-size.html">Increase Virtual Disk Size of an Image</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/increase-virtual-disk-size.html#determine-disk-size-and-list-of-partitions">Determine disk size and list of partitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/increase-virtual-disk-size.html#id1">Increase virtual disk size</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get-started/index.html#deploy-to-the-cloud">Deploy to the cloud</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/cloud-install/aws-web.html">Clear Linux* OS on Amazon Web Services*</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/aws-web.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/aws-web.html#locate-select-and-launch-the-cl-basic-ami">Locate, select, and launch the Clear Linux OS Basic AMI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/aws-web.html#connect-to-your-clear-linux-os-basic-instance">Connect to your Clear Linux OS basic instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/aws-web.html#update-the-cl-instance">Update the Clear Linux OS instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/aws-web.html#stop-the-cl-instance">Stop the Clear Linux OS instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/aws-web.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/cloud-install/azure.html">Clear Linux* OS on Microsoft* Azure*</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#install-ms-azure-cli-2-0-on-cl">Install MS Azure CLI 2.0 on Clear Linux OS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#log-into-your-microsoft-azure-account">Log into your Microsoft Azure account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#create-a-ms-azure-resource-group">Create a MS Azure resource group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#create-and-log-into-the-cl-virtual-machine">Create and log into the Clear Linux OS virtual machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#stop-and-deallocate-the-cl-vm-and-resources">Stop and deallocate the Clear Linux OS VM and resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#next-steps">Next steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/azure.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/cloud-install/digitalocean.html">Clear Linux* OS on DigitalOcean*</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/digitalocean.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/digitalocean.html#add-cl-image-to-digitalocean">Add Clear Linux OS Image to DigitalOcean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/digitalocean.html#create-and-deploy-a-cl-instance">Create and Deploy a Clear Linux OS Instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/digitalocean.html#connect-to-your-cl-instance">Connect to Your Clear Linux OS Instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/digitalocean.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../get-started/cloud-install/gce.html">Clear Linux* OS on Google Cloud Platform*</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/gce.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/gce.html#setup-cl-vm-on-gcp">Setup Clear Linux OS VM on GCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../get-started/cloud-install/gce.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#release-cadence">Release Cadence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#updates">Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#ease-of-use">Ease of Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#custom-derivatives">Custom Derivatives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about.html#create">Create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about.html#deploy">Deploy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about.html#administrate">Administrate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#clear-linux">Clear Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../clear/autoproxy.html">Autoproxy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autoproxy.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autoproxy.html#how-it-works">How it works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autoproxy.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/autospec.html">autospec</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autospec.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autospec.html#how-it-works">How it works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autospec.html#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autospec.html#test-packaged-software">Test packaged software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autospec.html#references">References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/autospec.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/bundles.html">Bundles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/bundles.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/compatible-kernels.html">Kernels</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/compatible-kernels.html#bare-metal-only">Bare metal only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/compatible-kernels.html#also-compatible-with-vms">Also compatible with VMs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/compatible-kernels.html#vm-only">VM only</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/debug.html">Debug system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/debug.html#background">Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/debug.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/debug.html#implementation">Implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/ister.html">ister.py image builder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/ister.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/ister.html#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/ister.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/mixer.html">mixer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/mixer.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/mixer.html#how-it-works">How it works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/mixer.html#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/mixer.html#references">References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/mixer.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/security.html">OS Security</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/security.html#security-in-updates">Security in updates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/security.html#security-in-software">Security in software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/security.html#security-in-system-design">Security in system design</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/stateless.html">Stateless</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/stateless.html#file-level-separation">File-level separation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/stateless.html#software-configuration">Software configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/stateless.html#system-reset">System reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/stateless.html#additional-information">Additional information</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/swupd.html">swupd</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/swupd.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/swupd.html#how-it-works">How it works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/swupd.html#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/swupd.html#quick-reference">Quick reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/swupd.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../clear/telemetrics.html">Telemetrics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../clear/telemetrics.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/telemetrics.html#how-to-use">How to use</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/telemetrics.html#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../clear/telemetrics.html#reference">Reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#maintenance">Maintenance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/architect-lifecycle.html">Architect the life-cycle of Clear Linux* OS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/architect-lifecycle.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/architect-lifecycle.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/architect-lifecycle.html#content-workflow">Content Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/architect-lifecycle.html#release-workflow">Release Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/architect-lifecycle.html#implementation">Implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/container-image-modify.html">Modify a Clear Linux OS-based container image</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-modify.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-modify.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-modify.html#example-1-add-a-bundle">Example 1: Add a bundle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-modify.html#example-2-change-cl-version-single-stage-build">Example 2: Change Clear Linux OS version (single-stage build)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-modify.html#example-3-change-cl-version-multi-stage-build">Example 3: Change Clear Linux OS version (multi-stage build)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-modify.html#example-4-customize-an-application-image-at-runtime">Example 4: Customize an application image at runtime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-modify.html#background">Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-modify.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/container-image-new.html">Build a new Clear Linux OS-based container image</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-new.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-new.html#build-the-base-container-image">Build the base container image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/container-image-new.html#manage-bundles-in-a-container">Manage bundles in a container</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/cpu-performance.html">CPU Power and Performance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/cpu-performance.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/cpu-performance.html#cpu-power-saving-mechanisms">CPU power saving mechanisms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/cpu-performance.html#linux-cpu-clock-frequency-scaling">Linux CPU clock frequency scaling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/cpu-performance.html#thermal-management">Thermal management</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/deploy-at-scale.html">Deploy at Scale</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/deploy-at-scale.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/deploy-at-scale.html#pick-a-usage-and-update-strategy">Pick a usage and update strategy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/deploy-at-scale.html#pick-an-image-distribution-strategy">Pick an image distribution strategy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/deploy-at-scale.html#considerations-with-stateless-systems">Considerations with stateless systems</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/developer-workstation.html">Developer Workstation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/developer-workstation.html#workstation-setup">Workstation Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/developer-workstation.html#swupd-search">swupd search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/developer-workstation.html#core-concepts">Core Concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/download-verify-decompress.html">Download, verify, and decompress a Clear Linux* OS image</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/download-verify-decompress.html#linux-os-steps">Linux OS steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/download-verify-decompress.html#macos-steps">macOS* steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/download-verify-decompress.html#windows-os-steps">Windows* OS steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/download-verify-decompress.html#image-types">Image types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/enable-systemd-boot-menu.html">Enable systemd-boot Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/enable-user-space.html">Create and enable a new user space</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/enable-user-space.html#create-a-new-user">Create a new user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/enable-user-space.html#add-the-new-user-to-the-wheel-group">Add the new user to the <em>wheel</em> group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/enable-user-space.html#install-and-update-the-os-software-to-its-current-version">Install and update the OS software to its current version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/enable-user-space.html#add-a-bundle">Add a bundle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/enable-user-space.html#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/fix-broken-install.html">Fix a broken installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/fix-broken-install.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/fix-broken-install.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/fix-broken-install.html#boot-a-live-desktop-image-to-fix-target-system">Boot a live desktop image to fix target system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/fix-broken-install.html#mount-root-partition-verify-and-fix">Mount root partition, verify, and fix</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/hostname.html">Modify hostname</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/hostname.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/hostname.html#set-your-hostname">Set your hostname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/hostname.html#view-your-hostname">View your hostname</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/increase-virtual-disk-size.html">Increase Virtual Disk Size of an Image</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/increase-virtual-disk-size.html#determine-disk-size-and-list-of-partitions">Determine disk size and list of partitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/increase-virtual-disk-size.html#id1">Increase virtual disk size</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/query-upstream.html">Query package info from upstream repository</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/query-upstream.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/query-upstream.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/query-upstream.html#configure-dnf">Configure DNF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/query-upstream.html#dnf-command-usage-examples">DNF command usage examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/resource-limits.html">Resource limits</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/resource-limits.html#system-wide-limits">System-wide limits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/resource-limits.html#per-user-limits">Per-user limits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/resource-limits.html#service-limits">Service limits</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/restart.html">Restart system services after an OS update</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/restart.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/restart.html#how-it-works">How it works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/restart.html#basic-options">Basic options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/restart.html#monitor-options">Monitor options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/restart.html#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/restart.html#telemetry">Telemetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/restart.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../maintenance/validate-signatures.html">Validate signatures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/validate-signatures.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/validate-signatures.html#image-content-validation">Image content validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../maintenance/validate-signatures.html#update-content-validation">Update content validation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#network">Network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../network/assign-static-ip.html">Assign a static IP address</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../network/assign-static-ip.html#identify-which-program-is-managing-the-interface">Identify which program is managing the interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/assign-static-ip.html#using-networkmanager">Using NetworkManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/assign-static-ip.html#using-systemd-networkd">Using systemd-networkd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../network/dpdk.html">Use DPDK to send packets between platforms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#install-dpdk-and-build-l3fwd-example-platform-b">Install dpdk and build l3fwd example (Platform B)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#build-pktgen-platform-a">Build pktgen (Platform A)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#bind-nics-to-dpdk-kernel-drivers-platforms-a-and-b">Bind NICs to DPDK kernel drivers (Platforms A and B)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#set-hugepages-platforms-a-and-b">Set hugepages (Platforms A and B)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#set-up-the-physical-environment-platforms-a-and-b">Set up the physical environment (Platforms A and B)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#run-l3fwd-application-platform-b">Run l3fwd application (Platform B)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#run-pktgen-application-platform-a">Run pktgen application (Platform A)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/dpdk.html#appendix-a-use-pass-through-for-virtual-machines">Appendix A: Use pass-through for virtual machines</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../network/firewall.html">Firewall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../network/firewall.html#default-ruleset">Default ruleset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/firewall.html#firewall-software">Firewall software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/firewall.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../network/network-bonding.html">Combine multiple interfaces with network bonding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network/openssh-server.html">Enable and configure SSH service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../network/openssh-server.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/openssh-server.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/openssh-server.html#change-default-port">Change default port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/openssh-server.html#enable-sftp">Enable SFTP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/openssh-server.html#enable-root-login">Enable root login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/openssh-server.html#enable-x11-forwarding">Enable X11-forwarding</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../network/time.html">Set system time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network/vnc.html">Remote-desktop to a host using VNC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../network/vnc.html#install-the-vnc-server-and-misc-components-on-your-host">Install the VNC server and misc. components on your host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/vnc.html#configure-a-vnc-server-start-method-on-your-host">Configure a VNC-server-start method on your host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/vnc.html#install-a-vnc-viewer-app-and-an-ssh-client-on-your-client-system">Install a VNC viewer app and an SSH client on your client system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/vnc.html#establish-a-vnc-connection-to-your-host">Establish a VNC connection to your host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/vnc.html#terminate-a-vnc-connection-to-your-host">Terminate a VNC connection to your host</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/vnc.html#encrypt-vnc-traffic-through-an-ssh-tunnel">Encrypt VNC traffic through an SSH tunnel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../network/wifi.html">Configure Wi-Fi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../network/wifi.html#using-network-manager">Using Network Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/wifi.html#using-wpa-supplicant">Using wpa_supplicant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../network/wifi.html#other-resources">Other resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#kernel">Kernel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/firmware.html">Firmware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/firmware.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/firmware.html#included-firmware">Included firmware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/firmware.html#additional-firmware-loading">Additional firmware loading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/firmware.html#cpu-microcode-loading">CPU microcode loading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/firmware.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/kernel-development.html">Kernel development</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-development.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-development.html#request-changes-be-included-with-the-cl-kernel">Request changes be included with the Clear Linux OS kernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-development.html#set-up-kernel-development-environment">Set up kernel development environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-development.html#customize-the-linux-kernel-source">Customize the Linux kernel source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-development.html#build-and-install-the-kernel">Build and install the kernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-development.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/kernel-modules.html">Add kernel modules manually</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules.html#kernel-module-availability">Kernel module availability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules.html#build-install-and-load-an-out-of-tree-module">Build, install, and load an out-of-tree module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules.html#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules.html#related-topic">Related topic</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../kernel/kernel-modules-dkms.html">Add kernel modules with DKMS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules-dkms.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules-dkms.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules-dkms.html#kernel-module-availability">Kernel module availability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules-dkms.html#install-dkms">Install DKMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules-dkms.html#build-install-and-load-an-out-of-tree-module">Build, install, and load an out-of-tree module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules-dkms.html#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../kernel/kernel-modules-dkms.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#stacks">Stacks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dars.html">Data Analytics Reference Stack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dars.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dars.html#using-the-docker-images">Using the Docker images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dars.html#using-apache-spark-in-dars">Using Apache Spark* in DARS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dars.html#using-apache-hadoop-in-dars">Using Apache Hadoop in DARS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dars.html#deploy-dars-on-kubernetes">Deploy DARS on Kubernetes*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dars.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dbrs.html">Database Reference Stack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dbrs.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dbrs.html#hardware-requirements">Hardware Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dbrs.html#firmware-configuration">Firmware configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dbrs.html#hardware-configuration">Hardware Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dbrs.html#running-dbrs-with-apache-cassandra">Running DBRS with Apache Cassandra*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dbrs.html#deploy-an-apache-cassandra-pmem-cluster-on-kubernetes">Deploy An Apache Cassandra-PMEM cluster on Kubernetes*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dbrs.html#running-dbrs-with-redis">Running DBRS with Redis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dlrs.html">Deep Learning Reference Stack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#releases">Releases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#tensorflow-single-and-multi-node-benchmarks">TensorFlow single and multi-node benchmarks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#pytorch-single-and-multi-node-benchmarks">PyTorch single and multi-node benchmarks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#tensorflow-training-tfjob-with-kubeflow-and-dlrs">TensorFlow Training (TFJob) with Kubeflow and DLRS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#pytorch-training-pytorch-job-with-kubeflow-and-dlrs">PyTorch Training (PyTorch Job) with Kubeflow and DLRS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#using-kubeflow-seldon-and-openvino-with-the-deep-learning-reference-stack">Using Kubeflow Seldon and OpenVINO* with the Deep Learning Reference Stack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#using-the-intel-openvino-model-optimizer">Using the Intel® OpenVINO Model Optimizer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#using-the-openvino-inference-engine">Using the OpenVino Inference Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#using-seldon-and-openvino-model-server-with-the-deep-learning-reference-stack">Using Seldon and OpenVINO* model server with the Deep Learning Reference Stack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#use-jupyter-notebook">Use Jupyter Notebook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#uninstallation">Uninstallation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#compiling-aixprt-with-openmp-on-dlrs">Compiling AIXPRT with OpenMP on DLRS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dlrs.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="greengrass.html">Enable AWS Greengrass* and OpenVINO™ toolkit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="greengrass.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="greengrass.html#supported-platforms">Supported platforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="greengrass.html#install-the-os-on-the-edge-device">Install the OS on the edge device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="greengrass.html#configure-aws-greengrass-group">Configure AWS Greengrass group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="greengrass.html#create-and-package-lambda-function">Create and package Lambda function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="greengrass.html#configure-lambda-function">Configure Lambda function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="greengrass.html#deploy-lambda-function">Deploy Lambda function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="greengrass.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Media Reference Stack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getting-the-pre-built-mers-container-image">Getting the pre-built <abbr title="Media Reference Stack">MeRS</abbr> container image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-the-mers-container-image-from-source">Building the <abbr title="Media Reference Stack">MeRS</abbr> container image from source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-the-mers-container-image">Using the <abbr title="Media Reference Stack">MeRS</abbr> container image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/apache-hadoop.html">Apache* Hadoop*</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-hadoop.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-hadoop.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-hadoop.html#install-apache-hadoop">Install Apache Hadoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-hadoop.html#configure-apache-hadoop">Configure Apache Hadoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-hadoop.html#configure-your-ssh-key">Configure your SSH key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-hadoop.html#run-the-hadoop-daemons">Run the Hadoop daemons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-hadoop.html#run-the-mapreduce-wordcount-example">Run the MapReduce wordcount example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/apache-spark.html">Apache* Spark*</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-spark.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-spark.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-spark.html#install-apache-spark">Install Apache Spark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-spark.html#configure-apache-spark">Configure Apache Spark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-spark.html#start-the-master-server-and-a-worker-daemon">Start the master server and a worker daemon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/apache-spark.html#run-the-spark-wordcount-example">Run the Spark wordcount example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/docker.html">Docker*</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/docker.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/docker.html#install-the-containers-basic-bundle">Install the containers-basic bundle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/docker.html#integration-with-kata-containers-optional">Integration with Kata Containers* (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/docker.html#additional-docker-configuration">Additional Docker configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/docker.html#pulling-and-running-an-image-from-docker-hub">Pulling and running an image from Docker Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/docker.html#creating-a-docker-swarm-cluster">Creating a Docker swarm cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/docker.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/flatpak.html">Flatpak*</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/flatpak.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/flatpak.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/flatpak.html#install-a-flatpak-app-with-gnome-software">Install a Flatpak app with Gnome Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/flatpak.html#install-a-flatpak-with-the-command-line">Install a Flatpak with the command line</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/fmv.html">Function Multi-Versioning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/fmv.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/fmv.html#install-and-configure-a-cl-host-on-bare-metal">Install and configure a Clear Linux OS host on bare metal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/fmv.html#detect-loop-vectorization-candidates">Detect loop vectorization candidates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/fmv.html#generate-the-fmv-patch">Generate the FMV patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/fmv.html#fft-project-example-using-fftw">FFT project example using FFTW</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/kata.html">Kata Containers*</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kata.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kata.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kata.html#install-kata-containers">Install Kata Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kata.html#run-kata-containers">Run Kata Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kata.html#more-information-about-docker">More information about Docker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/kata.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/kubernetes.html">Kubernetes*</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#install-kubernetes-and-cri-runtimes">Install Kubernetes and CRI runtimes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#configure-kubernetes">Configure Kubernetes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#configure-and-run-kubernetes">Configure and run Kubernetes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/kubernetes.html#configure-and-run-cri-o-kata-runtime">Configure and run CRI-O + kata-runtime</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#install-pod-network-add-on">Install pod network add-on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#use-your-cluster">Use your cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#related-topics">Related topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#cloud-native-setup-automation">Cloud native setup automation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#package-configuration-customization-optional">Package configuration customization (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#proxy-configuration-optional">Proxy configuration (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/kubernetes-bp.html">Kubernetes* Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes-bp.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes-bp.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes-bp.html#update-the-control-plane">Update the control plane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/kubernetes-bp.html#update-worker-nodes">Update worker nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/nvidia.html">NVIDIA* Drivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia.html#installation">Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia.html#install-dkms">Install DKMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia.html#download-the-nvidia-drivers">Download the NVIDIA drivers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia.html#disable-the-nouveau-driver">Disable the nouveau driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia.html#configure-alternative-software-paths">Configure alternative software paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia.html#install-the-nvidia-drivers">Install the NVIDIA drivers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia.html#updating">Updating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia.html#uninstallation">Uninstallation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia.html#brightness-control">Brightness control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia.html#additional-resources">Additional resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/nvidia-cuda.html">NVIDIA* CUDA Toolkit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#compatibility">Compatibility</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#check-compatibility-of-nvidia-components">Check compatibility of NVIDIA components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#check-gcc-compatibility">Check GCC compatibility</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#downloading-and-installation">Downloading and Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#download-the-nvidia-cuda-toolkit">Download the NVIDIA CUDA Toolkit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#install-the-nvidia-cuda-toolkit">Install the NVIDIA CUDA Toolkit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#using-the-nvidia-cuda-toolkit">Using the NVIDIA CUDA Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#uninstalling">Uninstalling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#debugging">Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/nvidia-cuda.html#additional-resources">Additional resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/openvino.html">OpenVINO™ for Deep Learning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/openvino.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/openvino.html#install-openvino">Install OpenVINO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/openvino.html#run-openvino-sample-application">Run OpenVINO sample application</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/openvino.html#use-model-to-test">Use model to test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/openvino.html#convert-model-to-ir-format">Convert model to IR format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/openvino.html#run-image-classification">Run image classification</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/openvino.html#run-benchmark-app">Run benchmark_app</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/php.html">PHP and PHP-FPM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/php.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/php.html#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/php.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/php.html#configure-php">Configure PHP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/php.html#install-php-extensions">Install PHP extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/php.html#enable-php-extensions">Enable PHP extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/php.html#configure-php-fpm">Configure PHP-FPM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/proxy.html">Proxy configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/proxy.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/proxy.html#shells-and-programs-in-a-desktop-session">Shells and programs in a desktop session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/proxy.html#terminal">Terminal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/proxy.html#wget">wget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/proxy.html#system-service-docker">System service (Docker*)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/proxy.html#git-over-ssh">git over ssh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/redis.html">Redis*</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/redis.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/redis.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/redis.html#install-the-redis-bundle">Install the Redis bundle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/redis.html#start-the-redis-server">Start the Redis-server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/redis.html#example-1-use-the-redis-cli-and-commands">Example 1: Use the redis-cli and commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/redis.html#example-2-run-the-cl-redis-docker-image">Example 2: Run the Clear Linux OS Redis Docker* image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/redis.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/smb.html">Samba* as a host</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/smb.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/smb.html#set-up-file-sharing">Set up file sharing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/smb.html#map-cl-drive-in-windows">Map Clear Linux OS drive in Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/smb-desktop.html">Samba* as a client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/smb-desktop.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/smb-desktop.html#connect-to-windows-shared-location-with-nautilus">Connect to Windows shared location with Nautilus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/tensorflow-machine-learning.html">TensorFlow* machine learning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/tensorflow-machine-learning.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/tensorflow-machine-learning.html#set-up-a-jupyter-notebook">Set up a Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/tensorflow-machine-learning.html#run-the-jupyter-machine-learning-example-code">Run the Jupyter machine learning example code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/tensorflow-machine-learning.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/wordpress.html">WordPress*</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/wordpress/web-server-install.html">Set up a LAMP web server on Clear Linux* OS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/web-server-install.html#install-apache">Install Apache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/web-server-install.html#change-the-default-configuration-and-data-directory">Change the default configuration and data directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/web-server-install.html#install-php">Install PHP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/web-server-install.html#install-mariadb">Install MariaDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/web-server-install.html#install-phpmyadmin">Install phpMyAdmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/web-server-install.html#use-phpmyadmin-to-manage-a-database">Use phpMyAdmin to manage a database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/web-server-install.html#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/wordpress/wp-install.html">Set up WordPress* on a LAMP web server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/wp-install.html#before-you-begin">Before you begin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/wordpress/wp-install.html#create-a-wordpress-server">Create a WordPress server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/yubikey-u2f.html">YubiKey* Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/yubikey-u2f.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/yubikey-u2f.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/yubikey-u2f.html#enable-linux-udev-rules-for-yubikey">Enable Linux udev rules for YubiKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/yubikey-u2f.html#enable-u2f-in-mozilla-firefox">Enable U2F in Mozilla Firefox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/yubikey-u2f.html#related-topics">Related topics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-linux.html">Dual-boot Clear Linux* OS with Any GRUB-based Linux* Distro</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-linux.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-linux.html#preliminary-steps">Preliminary steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-linux.html#install-cl-with-advanced-installation">Install Clear Linux OS with Advanced Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-linux.html#boot-cl-using-one-of-three-methods">Boot Clear Linux OS Using One of Three Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-linux.html#method-1-use-systemd-boot-to-boot-cl-and-also-chain-boot-grub">Method 1: Use systemd-boot to Boot Clear Linux OS and also Chain-boot GRUB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-linux.html#method-2-use-grub-to-boot-cl">Method 2: Use GRUB to Boot Clear Linux OS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-win.html">Dual-boot Clear Linux* OS and Windows* 10 OS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-win.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-win.html#method-1-shrink-windows-partition-and-install-cl">Method 1: Shrink Windows partition and install Clear Linux OS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-win.html#method-2-add-another-hard-disk-to-your-system-where-you-install-cl">Method 2: Add another hard disk to your system where you install Clear Linux OS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-win.html#advanced-use-systemd-boot-to-boot-windows-10-os-and-cl">Advanced: Use systemd-boot to boot Windows 10 OS and Clear Linux OS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/multi-boot/multi-boot.html">Multi-boot Clear Linux* OS with other operating systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multi-boot/multi-boot.html#detailed-procedures">Detailed procedures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-win.html">Dual-boot Clear Linux* OS and Windows* 10 OS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/multi-boot/dual-boot-linux.html">Dual-boot Clear Linux* OS with Any GRUB-based Linux* Distro</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/index.html#archive">Archive</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/archive/kata_migration.html">Migrate Clear Containers to Kata Containers*</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/archive/kata_migration.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/archive/kata_migration.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/archive/kata_migration.html#stop-clear-containers-instances">Stop Clear Containers instances</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/archive/kata_migration.html#manually-migrate-customized-configuration-files">Manually migrate customized configuration files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/archive/kata_migration.html#enable-kata-containers-as-default">Enable Kata Containers as default</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/archive/kata_migration.html#run-kata-containers">Run Kata Containers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/compatible-hardware.html">Compatible Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/bundles/bundles.html">Available bundles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/bundles/bundles.html#bundle-list">Bundle list</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/system-requirements.html">Recommended minimum system requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/system-requirements.html#installer-requirements">Installer requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/system-requirements.html#id1">System requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/system-requirements.html#recommended-configurations">Recommended configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/image-types.html">Clear Linux* OS image types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQ/index.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../FAQ/index.html#general">General</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#why-did-you-make-another-distro">Why did you make another distro?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#can-other-distros-copy-cl-improvements">Can other distros copy Clear Linux OS improvements?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#how-often-do-you-update">How often do you update?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#is-telemetry-required">Is telemetry required?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#what-is-the-default-firewall">What is the default firewall?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#where-are-the-files-that-i-usually-see-under-etc-like-fstab">Where are the files that I usually see under /etc like fstab?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../FAQ/index.html#software-packages">Software packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#how-is-software-installed-and-updated">How is software installed and updated?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#does-cl-use-rpms-like-other-distros">Does Clear Linux OS use RPMs like other distros?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#can-i-install-a-software-package-from-another-os-on-cl">Can I install a software package from another OS on Clear Linux OS?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../FAQ/index.html#software-availability">Software availability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#what-software-is-available-on-cl">What software is available on Clear Linux OS?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#is-google-chrome-available">Is Google* Chrome* available?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#is-microsoft-visual-studio-code-available">Is Microsoft* Visual Studio Code* available?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#is-ffmpeg-available">Is FFmpeg available?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#is-zfs-available">Is ZFS* available?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../FAQ/index.html#can-you-add-a-driver-that-i-need">Can you add a driver that I need?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../collaboration/collaboration.html">Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collaboration/collaboration.html#contribute-via-github">Contribute via GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collaboration/collaboration.html#contribution-guidelines">Contribution guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../collaboration/writing-guide.html">Writing guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/writing-guide.html#use-simple-english">Use simple English</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/writing-guide.html#make-content-scannable">Make content scannable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/writing-guide.html#use-strong-verbs">Use strong verbs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/writing-guide.html#avoid-long-noun-phrases">Avoid long noun phrases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/writing-guide.html#parallelism">Parallelism</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/writing-guide.html#grammar-and-punctuation">Grammar and punctuation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../collaboration/structure-formatting.html">Structure and formatting guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/structure-formatting.html#markup">Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/structure-formatting.html#documentation-organization">Documentation organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/structure-formatting.html#inline-text-formatting">Inline text formatting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/structure-formatting.html#code-blocks-and-examples">Code blocks and examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/structure-formatting.html#lists-and-instructions">Lists and instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/structure-formatting.html#notices">Notices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/structure-formatting.html#links">Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../collaboration/structure-formatting.html#images">Images</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../collaboration/collaboration.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Clear Linux* Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+
+<header id="header">
+  <div class="padding-md--left-right">
+
+    <div class="header__site_info">
+           <div class="header__site_info_name">
+           </div>
+    </div>
+    <nav class="header__menu">
+        <ul class="header__menu_list">
+              <li class="header__menu_list_item yellow  ">
+                <a tabindex='1' href="https://clearlinux.org">Home</a>
+              </li>
+              <li class="header__menu_list_item green  ">
+                <a tabindex='1' href="https://clearlinux.org/about">About</a>
+              </li>
+              <li class="header__menu_list_item purple  ">
+                <a tabindex='1' href="https://clearlinux.org/developer">Developer</a>
+              </li>
+              <li class="header__menu_list_item blue  ">
+                <a tabindex='1' href="https://clearlinux.org/software">Software</a>
+              </li>
+        </ul>
+    </nav>
+
+  </div>
+
+</header>
+
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Guides</a> &raquo;</li>
+        
+      <li>Media Reference Stack</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/clearlinux/clear-linux-documentation/blob/master/source/guides/stacks/mers.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="media-reference-stack">
+<span id="mers"></span><h1>Media Reference Stack<a class="headerlink" href="#media-reference-stack" title="Permalink to this headline">¶</a></h1>
+<p>The Media Reference Stack (MeRS) is a highly optimized software stack for
+Intel® architecture to enable media prioritized workloads, such as transcoding and analytics.</p>
+<p>This guide explains how to use the pre-built <abbr title="Media Reference Stack">MeRS</abbr> container image, build
+your own <abbr title="Media Reference Stack">MeRS</abbr> container image, and use the reference stack.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#overview" id="id5">Overview</a></li>
+<li><a class="reference internal" href="#getting-the-pre-built-mers-container-image" id="id6">Getting the pre-built <abbr title="Media Reference Stack">MeRS</abbr> container image</a></li>
+<li><a class="reference internal" href="#building-the-mers-container-image-from-source" id="id7">Building the <abbr title="Media Reference Stack">MeRS</abbr> container image from source</a></li>
+<li><a class="reference internal" href="#using-the-mers-container-image" id="id8">Using the <abbr title="Media Reference Stack">MeRS</abbr> container image</a></li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2><a class="toc-backref" href="#id5">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Finding the balance between quality and performance, understanding all of the
+complex standard-compliant encoders, and optimizing across the
+hardware-software stack for efficiency are all engineering and time
+investments for developers.</p>
+<p>The Media Reference Stack (MeRS) offers a highly optimized software stack for Intel Architecture to enable media prioritized workloads, such as
+transcoding and analytics. <abbr title="Media Reference Stack">MeRS</abbr> abstracts away the complexity of
+integrating multiple software components and specifically tunes them for Intel platforms. <abbr title="Media Reference Stack">MeRS</abbr> allows media and visual cloud developers to deliver experiences using a simple containerized solution.</p>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p><abbr title="Media Reference Stack">MeRS</abbr> can run on any host system that supports Docker*.</p>
+<p>The steps in this guide use Clear Linux* OS as the host system.</p>
+<ul class="simple">
+<li>To install Clear Linux OS on a host system, see how to
+<a class="reference internal" href="../../get-started/bare-metal-install-desktop.html#bare-metal-install-desktop"><span class="std std-ref">install Clear Linux* OS from the live desktop</span></a>.</li>
+<li>To install Docker* on a Clear Linux OS host system, see
+the <a class="reference internal" href="../../tutorials/docker.html#docker"><span class="std std-ref">instructions for installing Docker*</span></a>.</li>
+</ul>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">For optimal performance, a processor with Vector Neural Network
+Instructions (VNNI) should be used. VNNI is an extension of Intel®
+Advanced Vector Extensions 512 (Intel® AVX-512) and is available starting
+with the 2nd generation of Intel® Xeon® Scalable Platform, providing AI
+inference acceleration.</p>
+</div>
+</div>
+<div class="section" id="stack-features">
+<h3>Stack Features<a class="headerlink" href="#stack-features" title="Permalink to this headline">¶</a></h3>
+<p>The <abbr title="Media Reference Stack">MeRS</abbr> provides a <a class="reference external" href="https://hub.docker.com/r/clearlinux/stacks-mers">pre-built Docker image available on DockerHub</a>, which includes
+instructions on build the image from source. <abbr title="Media Reference Stack">MeRS</abbr> is open-sourced to ensure
+developers have easy access to the source code and are able to customize it.
+<abbr title="Media Reference Stack">MeRS</abbr> is built using the <em>clearlinux:latest</em> Docker image and aims to support the latest Clear Linux OS version.</p>
+<p><abbr title="Media Reference Stack">MeRS</abbr> provides the following libraries:</p>
+<table border="1" class="colwidths-auto docutils">
+<tbody valign="top">
+<tr class="row-odd"><td>SVT-HEVC</td>
+<td>Scalable Video Technology for HEVC encoding, also known as H.265</td>
+</tr>
+<tr class="row-even"><td>SVT-AV1</td>
+<td>Scalable Video Technology for AV1 encoding</td>
+</tr>
+<tr class="row-odd"><td>x264</td>
+<td>x264 for H.264/MPEG-4 AVC encoding</td>
+</tr>
+<tr class="row-even"><td>MKL-DNN</td>
+<td><a class="reference external" href="https://01.org/mkl-dnn">Intel® Math Kernel Library for Deep Neural Networks</a></td>
+</tr>
+</tbody>
+</table>
+<p>Components of the <abbr title="Media Reference Stack">MeRS</abbr> include:</p>
+<ul class="simple">
+<li>Clear Linux OS as a base for performance and security</li>
+<li><a class="reference external" href="https://software.intel.com/en-us/openvino-toolkit">Intel® Distribution of OpenVINO™ toolkit</a> for inference.</li>
+<li><a class="reference external" href="https://www.ffmpeg.org">FFmpeg</a> with <a class="reference external" href="https://01.org/svt">Scalable Video Technology (SVT)</a> plugins for encoding, decoding, and transcoding.</li>
+<li><a class="reference external" href="https://gstreamer.freedesktop.org/">GStreamer</a>  with <a class="reference external" href="https://01.org/svt">Scalable Video
+Technology (SVT)</a> and <a class="reference external" href="https://software.intel.com/en-us/openvino-toolkit">OpenVINO™ toolkit</a> plugins for
+analytics.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The pre-built <abbr title="Media Reference Stack">MeRS</abbr> container image configures <strong class="command">FFmpeg</strong> without
+certain elements (specific encoder, decoder, muxer, etc.) that you may
+require. If you require changes to <strong class="command">FFmpeg</strong> we suggest starting at <a class="reference internal" href="#building-the-mers-container-image"><span class="std std-ref">Building the MeRS container image from source</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Media Reference Stack is a collective work, and each piece of software
+within the work has its own license. Please see the <a class="reference external" href="https://clearlinux.org/stacks/media/terms-of-use">MeRS Terms of Use</a> for more details about licensing and usage of the Media Reference Stack.</p>
+</div>
+</div>
+</div>
+<div class="section" id="getting-the-pre-built-mers-container-image">
+<h2><a class="toc-backref" href="#id6">Getting the pre-built <abbr title="Media Reference Stack">MeRS</abbr> container image</a><a class="headerlink" href="#getting-the-pre-built-mers-container-image" title="Permalink to this headline">¶</a></h2>
+<p>Pre-built <abbr title="Media Reference Stack">MeRS</abbr> Docker images are available on DockerHub at
+<a class="reference external" href="https://hub.docker.com/r/clearlinux/stacks-mers">https://hub.docker.com/r/clearlinux/stacks-mers</a></p>
+<p>To use the <abbr title="Media Reference Stack">MeRS</abbr>:</p>
+<ol class="arabic">
+<li><p class="first">Pull the image directly from <a class="reference external" href="https://hub.docker.com/r/clearlinux/stacks-mers">Docker Hub</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull clearlinux/stacks-mers
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The <abbr title="Media Reference Stack">MeRS</abbr> docker image is large in size and will take some time to
+download depending on your Internet connection.</p>
+<p class="last">If you are on a network with outbound proxies, be sure to configure Docker allow access. See the <a class="reference external" href="https://docs.docker.com/config/daemon/systemd/#httphttps-proxy">Docker service proxy</a> and
+<a class="reference external" href="https://docs.docker.com/network/proxy/#configure-the-docker-client">Docker client proxy</a>
+documentation for more details.</p>
+</div>
+</li>
+<li><p class="first">Once you have downloaded the image, run it with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it clearlinux/stacks-mers
+</pre></div>
+</div>
+<p>This will launch the image and drop you into a bash shell inside the
+container. <strong class="command">GStreamer</strong> and <strong class="command">FFmpeg</strong> programs are
+installed in the container image and accessible in the default $PATH. These programs can be used as you would normally outside of <abbr title="Media Reference Stack">MeRS</abbr>.</p>
+<p>Paths to media files and video devices, such as cameras, can be shared from the host to the container with the <strong class="command">--volume</strong> switch
+<a class="reference external" href="https://docs.docker.com/storage/volumes/">using Docker  volumes</a>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="building-the-mers-container-image-from-source">
+<span id="building-the-mers-container-image"></span><h2><a class="toc-backref" href="#id7">Building the <abbr title="Media Reference Stack">MeRS</abbr> container image from source</a><a class="headerlink" href="#building-the-mers-container-image-from-source" title="Permalink to this headline">¶</a></h2>
+<p>If you choose to build your own MeRS container image, you can optionally add
+customizations as needed. The <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code> for the MeRS is available on
+<a class="reference external" href="https://github.com/intel/stacks/tree/master/mers">GitHub</a> and
+can be used for reference.</p>
+<ol class="arabic">
+<li><p class="first">The <abbr title="Media Reference Stack">MeRS</abbr> image is part of the dockerfiles repository inside the Clear Linux OS
+organization on GitHub. Clone the <code class="file docutils literal notranslate"><span class="pre">stacks</span></code> repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/intel/stacks.git
+</pre></div>
+</div>
+</li>
+<li><p class="first">Navigate to the <code class="file docutils literal notranslate"><span class="pre">stacks/mers/clearlinux</span></code> directory which contains
+the Dockerfile for the <abbr title="Media Reference Stack">MeRS</abbr>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ./stacks/mers/clearlinux
+</pre></div>
+</div>
+</li>
+<li><p class="first">Use the <strong class="command">docker build</strong> command with the <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code> to the
+MeRS container image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build --no-cache -t clearlinux/stacks-mers .
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="using-the-mers-container-image">
+<h2><a class="toc-backref" href="#id8">Using the <abbr title="Media Reference Stack">MeRS</abbr> container image</a><a class="headerlink" href="#using-the-mers-container-image" title="Permalink to this headline">¶</a></h2>
+<p>Below are some examples of how the <abbr title="Media Reference Stack">MeRS</abbr> container image can be used to
+process media files.</p>
+<p>The models and video source can be substituted from your use-case. Some
+publicly licensed sample videos are available at <a class="reference external" href="https://github.com/intel-iot-devkit/sample-videos">sample-videos repsoitory</a> for testing.</p>
+<div class="section" id="example-1-transcoding">
+<h3>Example 1: Transcoding<a class="headerlink" href="#example-1-transcoding" title="Permalink to this headline">¶</a></h3>
+<p>This example shows how to perform transcoding with <strong class="command">FFmpeg</strong>.</p>
+<ol class="arabic">
+<li><p class="first">On the host system, setup a workspace for data and models:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">ffmpeg</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">ffmpeg</span><span class="o">/</span><span class="nb">input</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">ffmpeg</span><span class="o">/</span><span class="n">output</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Copy a video file to <code class="file docutils literal notranslate"><span class="pre">~/ffmpeg/input</span></code>.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">&lt;/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">video</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">ffmpeg</span><span class="o">/</span><span class="nb">input</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the <em>clearlinux/stack-mers</em> docker image, allowing shared access to the
+workspace on the host:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> \
+<span class="o">-</span><span class="n">v</span> <span class="o">~/</span><span class="n">ffmpeg</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mers</span><span class="o">-</span><span class="n">user</span><span class="p">:</span><span class="n">ro</span> \
+<span class="n">clearlinux</span><span class="o">/</span><span class="n">stacks</span><span class="o">-</span><span class="n">mers</span><span class="p">:</span><span class="n">latest</span>
+</pre></div>
+</div>
+<p>After running the <strong class="command">docker run</strong> command, you enter a bash shell
+inside the container.</p>
+</li>
+<li><p class="first">From the container shell, you can run <strong class="command">FFmpeg</strong> against the videos
+in <code class="file docutils literal notranslate"><span class="pre">/home/mers-user/input</span></code> as you would normally outside of <abbr title="Media Reference Stack">MeRS</abbr>.</p>
+<p>For example, to transcode raw yuv420 content to SVT-HEVC and mp4:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">f</span> <span class="n">rawvideo</span> <span class="o">-</span><span class="n">vcodec</span> <span class="n">rawvideo</span> <span class="o">-</span><span class="n">s</span> <span class="mi">320</span><span class="n">x240</span> <span class="o">-</span><span class="n">r</span> <span class="mi">30</span> <span class="o">-</span><span class="n">pix_fmt</span> <span class="n">yuv420p</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;/</span><span class="n">home</span><span class="o">/</span><span class="n">mers</span><span class="o">-</span><span class="n">user</span><span class="o">/</span><span class="nb">input</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">yuv</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">c</span><span class="p">:</span><span class="n">v</span> <span class="n">libsvt_hevc</span> <span class="o">-</span><span class="n">y</span> <span class="o">&lt;/</span><span class="n">home</span><span class="o">/</span><span class="n">mers</span><span class="o">-</span><span class="n">user</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">mp4</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Some more generic examples of <strong class="command">FFmpeg</strong> commands can be found in
+the <a class="reference external" href="https://github.com/OpenVisualCloud/Dockerfiles/blob/master/doc/ffmpeg.md">OpenVisualCloud repository</a> and used for reference with <abbr title="Media Reference Stack">MeRS</abbr>.</p>
+<p>For more information on using <strong class="command">FFmpeg</strong>, refer to the <a class="reference external" href="https://ffmpeg.org/documentation.html">FFmpeg
+documentation</a>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="example-2-analytics">
+<h3>Example 2: Analytics<a class="headerlink" href="#example-2-analytics" title="Permalink to this headline">¶</a></h3>
+<p>This example shows how to perform analytics and inferences with
+<strong class="command">GStreamer</strong>.</p>
+<p>The steps here are referenced from the <a class="reference external" href="https://github.com/opencv/gst-video-analytics/wiki">gst-video-analytics Getting Started
+Guide</a> except simply
+substituting the <em>gst-video-analytics</em> docker image for the
+<em>clearlinux/stacks-mers</em> image.</p>
+<p>The example below shows how to use the <abbr title="Media Reference Stack">MeRS</abbr> container image to perform
+video with object detection and attributes recognition of a video using GStreamer using pre-trained models and sample video files.</p>
+<ol class="arabic">
+<li><p class="first">On the host system, setup a workspace for data and models:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">gva</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">models</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">models</span><span class="o">/</span><span class="n">intel</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">models</span><span class="o">/</span><span class="n">common</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">video</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Clone the opencv/gst-video-analytics repository into the workspace:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">opencv</span><span class="o">/</span><span class="n">gst</span><span class="o">-</span><span class="n">video</span><span class="o">-</span><span class="n">analytics</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">gst</span><span class="o">-</span><span class="n">video</span><span class="o">-</span><span class="n">analytics</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">gst</span><span class="o">-</span><span class="n">video</span><span class="o">-</span><span class="n">analytics</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Clone the Open Model Zoo repository into the workspace:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">opencv</span><span class="o">/</span><span class="n">open_model_zoo</span><span class="o">.</span><span class="n">git</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">open_model_zoo</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Use the Model Downloader tool of Open Model Zoo to download ready to use
+pre-trained models in IR format.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you are on a network with outbound proxies, you will need to
+configure set environment variables with the proxy server.
+Refer to the documentation on <a class="reference internal" href="../../tutorials/proxy.html#proxy"><span class="std std-ref">Proxy configuration</span></a> for detailed steps.</p>
+<p class="last">On Clear Linux OS systems you will need the <em>python-extras</em> bundle.
+Use <strong class="command">sudo swupd bundle-add python-extras</strong> for the downloader script to work.</p>
+</div>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">open_model_zoo</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">downloader</span>
+<span class="n">python3</span> <span class="n">downloader</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="nb">list</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">gst</span><span class="o">-</span><span class="n">video</span><span class="o">-</span><span class="n">analytics</span><span class="o">/</span><span class="n">samples</span><span class="o">/</span><span class="n">model_downloader_configs</span><span class="o">/</span><span class="n">intel_models_for_samples</span><span class="o">.</span><span class="n">LST</span> <span class="o">-</span><span class="n">o</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">models</span><span class="o">/</span><span class="n">intel</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Copy a video file in h264 or mp4 format to <code class="file docutils literal notranslate"><span class="pre">~/gva/data/video</span></code>. Any
+video with cars, pedestrians, human bodies, and/or human faces can be used.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">intel</span><span class="o">-</span><span class="n">iot</span><span class="o">-</span><span class="n">devkit</span><span class="o">/</span><span class="n">sample</span><span class="o">-</span><span class="n">videos</span><span class="o">.</span><span class="n">git</span> <span class="o">~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">video</span>
+</pre></div>
+</div>
+<p>This example simply clones all the video files from the <a class="reference external" href="https://github.com/intel-iot-devkit/sample-videos">sample-videos
+repsoitory</a>.</p>
+</li>
+<li><p class="first">From a desktop terminal, allow local access to the X host display.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xhost</span> <span class="n">local</span><span class="p">:</span><span class="n">root</span>
+
+<span class="n">export</span> <span class="n">DATA_PATH</span><span class="o">=~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span>
+<span class="n">export</span> <span class="n">GVA_PATH</span><span class="o">=~/</span><span class="n">gva</span><span class="o">/</span><span class="n">gst</span><span class="o">-</span><span class="n">video</span><span class="o">-</span><span class="n">analytics</span>
+<span class="n">export</span> <span class="n">MODELS_PATH</span><span class="o">=~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">models</span>
+<span class="n">export</span> <span class="n">INTEL_MODELS_PATH</span><span class="o">=~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">models</span><span class="o">/</span><span class="n">intel</span>
+<span class="n">export</span> <span class="n">VIDEO_EXAMPLES_PATH</span><span class="o">=~/</span><span class="n">gva</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">video</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the <em>clearlinux/stack-mers</em> docker image, allowing shared access to
+the X server and workspace on the host:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>docker run -it --runtime=runc --net=host \
+-v ~/.Xauthority:/root/.Xauthority \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+-e DISPLAY=$DISPLAY \
+-e HTTP_PROXY=$HTTP_PROXY \
+-e HTTPS_PROXY=$HTTPS_PROXY \
+-e http_proxy=$http_proxy \
+-e https_proxy=$https_proxy \
+-v $GVA_PATH:/home/mers-user/gst-video-analytics \
+-v $INTEL_MODELS_PATH:/home/mers-user/intel_models \
+-v $MODELS_PATH:/home/mers-user/models \
+-v $VIDEO_EXAMPLES_PATH:/home/mers-user/video-examples \
+-e MODELS_PATH=/home/mers-user/intel_models:/home/mers-user/models \
+-e VIDEO_EXAMPLES_DIR=/home/mers-user/video-examples \
+clearlinux/stacks-mers:latest
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In the <strong class="command">docker run</strong> command above:</p>
+<ul class="last simple">
+<li><strong class="command">--runtime=runc</strong> specifies the container runtime to be
+<em>runc</em> for this container. It is needed for correct interaction with X
+server.</li>
+<li><strong class="command">--net=host</strong> provides host network access to container. It is
+needed for correct interaction with X server.</li>
+<li>Files <code class="file docutils literal notranslate"><span class="pre">~/.Xauthority</span></code> and <code class="file docutils literal notranslate"><span class="pre">/tmp/.X11-unix</span></code> mapped to the
+container are needed to ensure smooth authentication with X server.</li>
+<li><strong class="command">-v</strong> instances are needed to map host system directories
+inside Docker container.</li>
+<li><strong class="command">-e</strong> instances set Docker container environment variables.
+Samples need them some of them set correctly to operate. Proxy variables
+are needed if host is behind firewall.</li>
+</ul>
+</div>
+<p>After running the <strong class="command">docker run</strong> command, it will drop you into a
+bash shell inside the container.</p>
+</li>
+<li><p class="first">From the container shell, run a sample analytics program in
+<code class="file docutils literal notranslate"><span class="pre">~/gva/gst-video-analytics/samples</span></code> against your video source.</p>
+<p>Below are sample analytics that can be run against the sample videos.
+Choose one to run:</p>
+<ul>
+<li><p class="first">Samples with <em>face detection and classification</em>:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>./gst-video-analytics/samples/shell/face_detection_and_classification.sh $VIDEO_EXAMPLES_DIR/face-demographics-walking-and-pause.mp4
+./gst-video-analytics/samples/shell/face_detection_and_classification.sh $VIDEO_EXAMPLES_DIR/face-demographics-walking.mp4
+./gst-video-analytics/samples/shell/face_detection_and_classification.sh $VIDEO_EXAMPLES_DIR/head-pose-face-detection-female-and-male.mp4
+./gst-video-analytics/samples/shell/face_detection_and_classification.sh $VIDEO_EXAMPLES_DIR/head-pose-face-detection-male.mp4
+./gst-video-analytics/samples/shell/face_detection_and_classification.sh $VIDEO_EXAMPLES_DIR/head-pose-face-detection-female.mp4
+</pre></div>
+</div>
+<p>When running, a video with object detection and attributes recognition
+(bounding boxes around faces with recognized attributes) should be
+played.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/mers-fig-1.png"><img alt="Face detection with the Clear Linux* OS Media Reference Stack" src="../../_images/mers-fig-1.png" style="width: 460.79999999999995px; height: 278.4px;" /></a>
+<p class="caption"><span class="caption-text">Figure 1: Screenshot of <abbr title="Media Reference Stack">MeRS</abbr> running face detection with GSTreamer
+and OpenVINO.</span></p>
+</div>
+</li>
+<li><p class="first">Sample with  <em>vehicle detection</em>:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>./gst-video-analytics/samples/shell/vehicle_detection_2sources_cpu.sh $VIDEO_EXAMPLES_DIR/car-detection.mp4
+</pre></div>
+</div>
+<p>When running, a video with object detection and attributes recognition
+(bounding boxes around vehicles with recognized attributes) should be
+played.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/mers-fig-2.png"><img alt="Vehicle detection with the Clear Linux* OS Media Reference Stack" src="../../_images/mers-fig-2.png" style="width: 460.79999999999995px; height: 278.4px;" /></a>
+<p class="caption"><span class="caption-text">Figure 2: Screenshot of <abbr title="Media Reference Stack">MeRS</abbr> running vehicle detection with
+GSTreamer and OpenVINO.</span></p>
+</div>
+</li>
+<li><p class="first">Sample with <em>FPS measurement</em>:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>./gst-video-analytics/samples/shell/console_measure_fps_cpu.sh $VIDEO_EXAMPLES_DIR/bolt-detection.mp4
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019.
+      <span class="lastupdated">
+        Last updated on Dec 20, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+
+<div id="trademarks">
+  <p>*Other names and brands may be claimed as the property of others.</p>
+</div>
+
+
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+
+<script type="text/javascript" src="../../_static/tcs_theme.js"></script>
+
+
+
+</body>
+</html>
